@@ -1,0 +1,11 @@
+# Requirements
+ESP8266 Board
+Sct-013 Non invasive 30A inductive current sensor
+Arduino IDE
+Arduino Board Library: Generic ESP8266 Module
+Arduino Library: EmonLib.h
+Arduino Library: EspMQTTClient
+RaspberryPi
+Node-Red
+MQTT Mosquito Broker
+Grafana
