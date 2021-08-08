@@ -16,22 +16,22 @@ unsigned long previous_time = 0;
 #define ADC_INPUT_2 32                                                   // Sensor 2
 #define ADC_INPUT_3 35                                                   // Sensor 3
 
-#define WIFI_SSID        "Razorback"                                     // WiFi Username
-#define WIFI_PASS        "Beltalowda inyalowda 1!"                       // Wifi Password
+#define WIFI_SSID        "<WiFi_username_here>"                          // WiFi Username
+#define WIFI_PASS        "<WiFi_password_here>"                          // Wifi Password
 
-#define BROKER_IP        "192.168.0.17"                                  // IP adress of MQTT broker
-#define BROKER_USERNAME  "peter"                                         // Broker username
-#define BROKER_PASSWORD  "abc123"                                        // Broker password
-#define CLIENT_NAME      "ESP32_CurrentSensor"                           // Mqtt client name to identify the device
-#define BROKER_PORT      1883                                            // MQTT Port
-#define lastwill_topic   "cordilleras/lastwill"                          // MQTT topic to report lastwill and testament.
+#define BROKER_IP        "<local_ip_address>"                            // IP adress of MQTT broker
+#define BROKER_USERNAME  "<broker_username>"                             // Broker username
+#define BROKER_PASSWORD  "<broker_password>"                             // Broker password
+#define CLIENT_NAME      "<MQTT_name_to_identify_device>"                // Mqtt client name to identify the device
+#define BROKER_PORT      1883                                            // MQTT Port, 1883  is default
+#define lastwill_topic   "<last_will_topic>"                             // MQTT topic to report lastwill and testament.
 #define lastwill_text    "Current sensor has gone offline unexpextedly." // MQTT message to report lastwill and testament.
 
 String  client_name                = CLIENT_NAME;                        // MQTT Topic to report initial value
-String  startup_topic              = "cordilleras/startup";              // MQTT Topic to report startup
-String  medidor_corriente1_topic   = "cordilleras/medidor_corriente1";   // MQTT topic to report values
-String  medidor_corriente2_topic   = "cordilleras/medidor_corriente2";   // MQTT topic to report values
-String  medidor_corriente3_topic   = "cordilleras/medidor_corriente3";   // MQTT topic to report values
+String  startup_topic              = "<startup_topic>";                  // MQTT Topic to report startup
+String  medidor_corriente1_topic   = "<topic_to_report_sensor_1>";       // MQTT topic to report values
+String  medidor_corriente2_topic   = "<topic_to_report_sensor_2>";       // MQTT topic to report values
+String  medidor_corriente3_topic   = "<topic_to_report_sensor_3>";       // MQTT topic to report values
 
 // Voltaje de red eléctrica
 float voltajeRed = 120.0;
