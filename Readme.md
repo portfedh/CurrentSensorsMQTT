@@ -49,15 +49,14 @@ Software:
 - Arduino Library: [EspMQTTClient.h](https://www.arduino.cc/reference/en/libraries/espmqttclient/)
 - Emonlib Library: [EmonLib.h](https://www.arduino.cc/reference/en/libraries/emonlib/)
 
-
 The sensor requires 3V input to work and so can be powered directly from the microcontroller.
 
 Connection Diagram:
--- Connection Diagram ---
+![Connection Diagram](https://bite-size.mx/CurrentSensorDiagram.png)
+![PCB Diagram](https://bite-size.mx/CurrentSensorPCB.png)
 
 Some Photos of the setup:
-
--- Setup ---
+![Current Sensor Setup](https://bite-size.mx/CurrentSensorSetup.png)
 
 ## How to Use
 
