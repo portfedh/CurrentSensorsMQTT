@@ -127,9 +127,9 @@ void loop()
       Serial.print('\n');
 
       // MQTT Client Publisher
-      client.publish(medidor_corriente1_topic, potencia1);
-      client.publish(medidor_corriente2_topic, potencia2); //float(potencia2, 1)
-      client.publish(medidor_corriente3_topic, potencia3); //float(potencia3, 1)
+      client.publish(medidor_corriente1_topic, String(potencia1));
+      client.publish(medidor_corriente2_topic, String(potencia2));
+      client.publish(medidor_corriente3_topic, String(potencia3));
       Serial.print('\n');
 
       // Update timing for next time
