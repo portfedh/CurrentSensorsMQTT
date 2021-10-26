@@ -85,4 +85,4 @@ You can see how the first line (medidor 1) uses more electricity than the second
 You can also see periodic spikes of about 5 amps. This is the refrigerator motor turning on. 
 Finally, you can see some massive spikes at 8am, 4pm and 8.30pm. This is the microwave turning on during breakfast, lunch and dinner.
 
-![Grafana Output](http://bite-size.mx/GrafanaWaterLevelSensor.png)
+![Grafana Output](http://bite-size.mx/GrafanaCurrentSensor.png)
