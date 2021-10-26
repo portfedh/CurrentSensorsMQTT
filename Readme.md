@@ -78,3 +78,11 @@ Output should be something similar to the following:
 ---(Serial Monitor GIF here)---
 
 ----(Over MQTT Broker GIF here)--
+
+Here is an image of how the information looks when written into influxdb and then displayed in Grafana. 
+The graph shows a 24 hour period. 
+You can see how the first line (medidor 1) uses more electricity than the second or the third line. 
+You can also see periodic spikes of about 5 amps. This is the refrigerator motor turning on. 
+Finally, you can see some massive spikes at 8am, 4pm and 8.30pm. This is the microwave turning on during breakfast, lunch and dinner.
+
+![Grafana Output](http://bite-size.mx/GrafanaWaterLevelSensor.png)
