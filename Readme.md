@@ -56,7 +56,9 @@ Connection Diagram:
 ![PCB Diagram](https://bite-size.mx/CurrentSensorPCB.png)
 
 Some Photos of the setup:
+![Current Sensor Case](https://bite-size.mx/ElectricSensorCase.png)
 ![Current Sensor Setup](https://bite-size.mx/CurrentSensorSetup.png)
+![Current Measuring Sensors](https://bite-size.mx/CurrentSensors.png)
 
 ## How to Use
 
