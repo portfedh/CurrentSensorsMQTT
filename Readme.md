@@ -56,8 +56,17 @@ Connection Diagram:
 ![PCB Diagram](https://bite-size.mx/CurrentSensorPCB.png)
 
 Some Photos of the setup:
+
+This is what the whole setup looks like:
+![Overview of the Sensor Case](https://bite-size.mx/CurrentSensorComplete.jpg)
+
+This is a zoom of the case mounted in a wall:
 ![Current Sensor Case](https://bite-size.mx/ElectricSensorCase.png)
+
+When you open the case, this is what it looks like:
 ![Current Sensor Setup](https://bite-size.mx/CurrentSensorSetup.png)
+
+Once you set up your measuring sensors, it should look similar to this:
 ![Current Measuring Sensors](https://bite-size.mx/CurrentSensors.png)
 
 ## How to Use
