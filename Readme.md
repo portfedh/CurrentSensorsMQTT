@@ -6,7 +6,12 @@ The purpose of the project was to monitor the electricity consumption of my home
 
 I chose to use 3 sensors to monitor the electrical consumption in different circuits of the main panel. This allowed me to check if the loads were propperly balanced (they were not) and if electricity consumption was within a saftey range.
 
-Afterwards I integrated the sensor with a Raspberry Pi. Using Mosquitto MQTT, Node-red, Grafana and InfluxDb, I was able to store and visuallize the information, as well as adding some Telegram alerts for when power consumption is very high. 
+Afterwards I integrated the sensor with a [Raspberry Pi](https://www.raspberrypi.org/). Using 
+[Mosquitto MQTT](https://mosquitto.org/),
+[Node-RED](https://nodered.org/),
+[InfluxDB](https://www.influxdata.com/) and
+[Grafana](https://grafana.com/),
+I was able to store and visuallize the information, as well as adding some [Telegram](https://core.telegram.org/bots), alerts for when power consumption is very high. 
 
 With the sensor and this setup I could vidualize several interesting things, such as the massive spikes that microwave ovens produce when they are turned on, or that most of my electric consumption comes from my refrigerator.
 
@@ -20,7 +25,7 @@ Measurements are then sent through WIFI to an MQTT broker. With a Raspberry Pi a
 
 Mosquitto MQTT is an MQTT broker, which allows Node-Red to read the MQTT messages from the sensor and store them in a database (influxDB). Grafana is a data visualization tool that can extract the information from InfluxDB and display it in a visually apealing and interactive way. Node Red can also be integrated with Telegram, which allows message alarms to be sent in case the electricity level rises above a threshold value.
 
-#### To estimate the power consumption of your home, you would do the following:
+### One way to estimate the power consumption of your home, would be as follows:
 
 (Electric power consumption in Mexico is estimated in Kwh (Kilo Watt/hour), If your country does it differently, this may not apply).
 
@@ -72,11 +77,33 @@ The sensor requires 3V input to work and so can be powered directly from the mic
 ## Output Example
 Output should be something similar to the following:
 
----(Serial Monitor GIF here)---
+#### When your code uploads you should get a confirmation in the serial monitor:
+![SerialMonitor](https://bite-size.mx/Current_Serial_Monitor.png)
 
-----(Over MQTT Broker GIF here)--
+#### Using Mosquitto MQTT you can also see the values as they are reported in real time.
+In this example, we are suscribing to a single sensor topic named "Cordilleras/medidor_corriente1", not all three.
+![SerialMonitor](https://bite-size.mx/Current_Mosquitto.png)
 
-Here is an image of how the information looks when written into influxdb and then displayed in Grafana.
+#### Using Node-RED you can save the MQTT information into InfluxDB
+The purple nodes read the MQTT information.
+
+The orange function nodes save the information of each sensor as a variable.
+
+Green Nodes are for debuging and testing.
+
+The blue node executes automatically every 5 minutes.
+
+The Orange node saves all three variables as a single payload.
+
+Finally, the brown node saves the information into InfluxDB. 
+
+![NodeRED](https://bite-size.mx/Current_NodeRed.png)
+
+#### This is how the information looks inside the InfluxDB Database
+![NodeRED](https://bite-size.mx/Current_Influxdb.png)
+
+#### Visualize the data using Grafana
+Below is an image of how the information looks when written into influxdb and then displayed in Grafana.
 The graph shows a 24 hour period.
 
 You can see how the first electric line (medidor 1) uses more electricity than the second or the third line.
@@ -87,7 +114,6 @@ Finally, you can see some massive spikes at 8am, 4pm and 8.30pm. This is the mic
 If you compare the electricity consumption of line 1, 2 and 3, it is clear that loads are unbalanced, since most of the electric consumption is going on in line 1. 
 
 ![Grafana Output](http://bite-size.mx/GrafanaCurrentSensor.png)
-
 
 ### Below ara some pictures of the Hardware Setup:
 
