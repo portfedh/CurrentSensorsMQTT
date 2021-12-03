@@ -207,4 +207,4 @@ The line of code where the sensors can be calibrated is:
 
 Here is a gif of the procedure:
 
-![Current Measuring Sensors](https://bite-size.mx/CurrentSensorCalibration.gif)
+![Current Measuring Sensors](https://bite-size.mx/Current_SensorCalibration.gif)
