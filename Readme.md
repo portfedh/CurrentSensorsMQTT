@@ -117,55 +117,93 @@ If you compare the electricity consumption of line 1, 2 and 3, it is clear that 
 
 ### Below ara some pictures of the Hardware Setup:
 
-#### Connection Diagram:
+### Connection Diagram:
+
 ![Connection Diagram](https://bite-size.mx/CurrentSensorDiagram.png)
 
-#### PCB Diagram:
+### PCB Diagram:
+
 ![PCB Diagram](https://bite-size.mx/CurrentSensorPCB.png)
 
-#### Prototype using a 3D printed diagram and a single sensor:
+### Prototype using a 3D printed diagram and a single sensor:
+
 ![PCB Diagram](https://bite-size.mx/Current_Prototype.jpg)
 
-#### Prototype using a breadboard and three sensors:
+### Prototype using a breadboard and three sensors:
+
 ![PCB Diagram](https://bite-size.mx/Current_Breadboard.jpg)
 
-#### CNC Milling of the PCB using a Genmitsu 3018-PROVer:
+### CNC Milling of the PCB using a Genmitsu 3018-PROVer:
+
 ![PCB Diagram](https://bite-size.mx/Current_MillingPCB.jpg)
 
-#### Completed PCB Test (cardboard vs copper):
+### Completed PCB Test (cardboard vs copper):
+
 ![PCB Diagram](https://bite-size.mx/Current_PCBTest.jpg)
 
-#### Completed PCB:
+### Completed PCB:
+
 ![PCB Diagram](https://bite-size.mx/Current_PCBFinal.jpg)
 
-#### Completed PCB (Backside):
+### Completed PCB (Backside):
+
 ![PCB Diagram](https://bite-size.mx/Current_PCBBackside.jpg)
 
-#### Completed PCB (Backside2):
+### Completed PCB (Backside2):
+
 ![PCB Diagram](https://bite-size.mx/Current_PCBConnected.jpg)
 
-#### Labeled PCB (Backside):
+### Labeled PCB (Backside):
+
 ![PCB Diagram](https://bite-size.mx/Current_PCBLabeled.jpg)
 
-#### Soldered PCB:
+### Soldered PCB:
+
 ![PCB Diagram](https://bite-size.mx/Current_PCBSoldered.jpg)
 
-#### Completed Sensor:
+### Completed Sensor:
+
 ![Overview of the Sensor Case](https://bite-size.mx/Current_PCBDone.jpg)
 
-#### Sensor Inside the case, glued with silicone:
+### Sensor Inside the case, glued with silicone:
+
 ![Overview of the Sensor Case](https://bite-size.mx/Current_Case.jpg)
 
-#### Sensor Inside the case (open):
+### Sensor Inside the case (open):
+
 ![Overview of the Sensor Case](https://bite-size.mx/Current_Final.jpg)
 
+### Completed Sensor case (closed):
 
-#### Completed Sensor case (closed):
 ![Overview of the Sensor Case](https://bite-size.mx/CurrentSensorComplete.jpg)
 
-#### The sensor mounted in a wall:
+### The sensor mounted in a wall:
+
 ![Current Sensor Case](https://bite-size.mx/ElectricSensorCase.png)
 
-#### Sensors connected to the line, taking measurements
+### Sensors connected to the line, taking measurements:
+
 ![Current Measuring Sensors](https://bite-size.mx/CurrentSensors.png)
 
+### Sensors calibration:
+
+Once the hardware is setup, I used the following procedure to calibrate the sensors:
+
+- Split an extention cord so that the line and neutral wires are separated.
+- Hook up the extention cord to the main power.
+- Connect a heater, blow drier or any device that uses a significant amount of electricity.
+- Hook up the sensors to one of the extension cord lines.
+- Hook up a professional current sensor to the same extension cord line (borrow or rent one if you dont have one)
+- Turn the heater on.
+- Compare the values in your sensors to the current sensor.
+- Adjust the calibration value in the code.
+- Upload the code and try again until readings match.
+
+Since all three sensors are hooked up to the same line, you can also check if readings are consistent.
+
+The line of code where the sensors can be calibrated is:
+`energyMonitor1.current(ADC_INPUT_1, 0.145);`
+
+Here is a gif of the procedure:
+
+![Current Measuring Sensors](https://bite-size.mx/CurrentSensorCalibration.gif)
