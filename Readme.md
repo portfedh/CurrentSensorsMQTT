@@ -202,6 +202,7 @@ Once the hardware is setup, I used the following procedure to calibrate the sens
 Since all three sensors are hooked up to the same line, you can also check if readings are consistent.
 
 The line of code where the sensors can be calibrated is:
+
 `energyMonitor1.current(ADC_INPUT_1, 0.145);`
 
 Here is a gif of the procedure:
