@@ -1,5 +1,7 @@
 # MQTT Current Sensor
 
+There is a blog post explaining this project in depth at: [https://pablocruz.io/iot-energy-monitor/](https://pablocruz.io/iot-energy-monitor/)
+
 The idea of this sensor is to monitor the current level (in Amps) of an electric line and report its values at 5 minute intervals.
 
 The purpose of the project was to monitor the electricity consumption of my home throughout the day and estimate the amount of solar panels I would need to produce that amount of energy.
